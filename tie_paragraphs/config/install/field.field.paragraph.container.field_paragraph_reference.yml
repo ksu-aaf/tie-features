@@ -1,0 +1,68 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph_reference
+    - paragraphs.paragraphs_type.body_text
+    - paragraphs.paragraphs_type.citations
+    - paragraphs.paragraphs_type.container
+    - paragraphs.paragraphs_type.file
+    - paragraphs.paragraphs_type.hero
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.jumbotron
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: paragraph.container.field_paragraph_reference
+field_name: field_paragraph_reference
+entity_type: paragraph
+bundle: container
+label: 'Paragraph Reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      body_text: body_text
+      hero: hero
+      jumbotron: jumbotron
+      video: video
+      citations: citations
+      file: file
+      image: image
+    target_bundles_drag_drop:
+      container:
+        weight: 5
+        enabled: false
+      body_text:
+        enabled: true
+        weight: 6
+      hero:
+        enabled: true
+        weight: 6
+      jumbotron:
+        enabled: true
+        weight: 7
+      article_citation:
+        weight: 8
+        enabled: false
+      video:
+        enabled: true
+        weight: 8
+      citations:
+        enabled: true
+        weight: 10
+      conference_citation:
+        weight: 14
+        enabled: false
+      file:
+        enabled: true
+        weight: 16
+      image:
+        enabled: true
+        weight: 18
+field_type: entity_reference_revisions

@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Area of Focus'
+vid: area_of_focus
+description: ''
+hierarchy: 0
+weight: 0

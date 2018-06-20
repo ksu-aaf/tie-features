@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_journal_title
+    - paragraphs.paragraphs_type.article_citation
+id: paragraph.article_citation.field_journal_title
+field_name: field_journal_title
+entity_type: paragraph
+bundle: article_citation
+label: 'Journal Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,59 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_unit_position
+    - paragraphs.paragraphs_type.position
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_unit_position
+field_name: field_unit_position
+entity_type: user
+bundle: user
+label: 'Unit Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      position: position
+    target_bundles_drag_drop:
+      article_citation:
+        weight: 12
+        enabled: false
+      body_text:
+        weight: 13
+        enabled: false
+      citations:
+        weight: 14
+        enabled: false
+      conference_citation:
+        weight: 15
+        enabled: false
+      container:
+        weight: 16
+        enabled: false
+      file:
+        weight: 17
+        enabled: false
+      hero:
+        weight: 18
+        enabled: false
+      image:
+        weight: 19
+        enabled: false
+      jumbotron:
+        weight: 20
+        enabled: false
+      position:
+        enabled: true
+        weight: 21
+      video:
+        weight: 22
+        enabled: false
+field_type: entity_reference_revisions

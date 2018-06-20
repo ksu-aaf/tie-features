@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.tie_article.field_tie_article_container
+    - field.field.node.tie_article.field_tie_article_description
+    - field.field.node.tie_article.field_tie_article_tag_ref
+    - node.type.tie_article
+  module:
+    - entity_reference_revisions
+    - user
+id: node.tie_article.full
+targetEntityType: node
+bundle: tie_article
+mode: full
+content:
+  field_tie_article_container:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  field_tie_article_description: true
+  field_tie_article_tag_ref: true
+  links: true
+  workbench_moderation_control: true

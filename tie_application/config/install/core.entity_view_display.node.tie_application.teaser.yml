@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tie_application.field_application_deadline
+    - field.field.node.tie_application.field_application_description
+    - field.field.node.tie_application.field_application_documents
+    - field.field.node.tie_application.field_application_form_ref
+    - field.field.node.tie_application.field_application_tags
+    - node.type.tie_application
+  module:
+    - datetime
+    - text
+    - user
+id: node.tie_application.teaser
+targetEntityType: node
+bundle: tie_application
+mode: teaser
+content:
+  field_application_deadline:
+    type: datetime_custom
+    weight: 0
+    label: inline
+    settings:
+      date_format: 'Y-m-d\TH:i:s'
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_application_description:
+    type: text_trimmed
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_application_documents: true
+  field_application_form_ref: true
+  field_application_tags: true

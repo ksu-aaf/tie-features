@@ -1,0 +1,26 @@
+name: Article
+description: 'Provides Article content type and related configuration. Any piece of content that helps informs readers such as blog post or article.  Content is moderated through an approval process. '
+type: module
+core: 8.x
+dependencies:
+  - comment
+  - entity_reference_revisions
+  - field
+  - field_permissions
+  - file
+  - image
+  - menu_ui
+  - metatag
+  - node
+  - paragraphs
+  - path
+  - rdf
+  - taxonomy
+  - text
+  - tie_core
+  - tie_paragraphs
+  - user
+  - views
+  - workbench_moderation
+version: 8.x-1.0
+package: TIE

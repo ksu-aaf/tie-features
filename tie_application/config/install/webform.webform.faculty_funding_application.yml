@@ -1,0 +1,215 @@
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: null
+template: false
+id: faculty_funding_application
+title: 'Faculty Funding Application'
+description: 'Faculty Funding Template. Includes contact information, funding amount, likert scale for meeting criteria, application upload field (customized directory for file upload) and a check box indicating that they have obtained all of the necessary signatures and have attached the coversheet.'
+category: null
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\nemail:\n  '#type': email\n  '#title': Email\nrequest_amount:\n  '#type': number\n  '#title': 'Request Amount'\n  '#title_display': before\n  '#field_prefix': $\napplication_upload:\n  '#type': webform_document_file\n  '#title': 'Application Upload'\nfaculty_funding_app_status:\n  '#type': select\n  '#title': 'Faculty Funding App Status'\n  '#default_value': submitted\n  '#description': 'Application status.&nbsp;'\n  '#options':\n    submitted: 'Application Submitted'\n    review: 'Available for Review'\n    denied: 'Application Denied'\n    accepted: 'Application Accepted'\n  '#access_create_roles':\n    - administrator\n  '#access_update_roles':\n    - administrator\n    - faculty_funding_chair\n  '#access_view_roles':\n    - administrator\n    - faculty_funding_chair\n"
+css: ''
+javascript: ''
+settings:
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_label: ''
+  form_submit_once: false
+  form_submit_attributes: {  }
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_next_button_label: ''
+  wizard_next_button_attributes: {  }
+  wizard_prev_button_label: ''
+  wizard_prev_button_attributes: {  }
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_next_button_label: ''
+  preview_next_button_attributes: {  }
+  preview_prev_button_label: ''
+  preview_prev_button_attributes: {  }
+  preview_message: ''
+  draft: ''
+  draft_auto_save: false
+  draft_button_label: ''
+  draft_button_attributes: {  }
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: '[webform:title] Submission Confirmation'
+  confirmation_message: 'This message confirms that we have received your&nbsp;[webform:title] submission. &nbsp;'
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles:
+      - administrator
+      - faculty_funding_reviewer
+      - faculty_funding_chair
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles:
+      - faculty_funding_chair
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles:
+      - authenticated
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles:
+      - faculty_funding_chair
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  faculty_funding_submission_confirmation:
+    id: email
+    label: 'Faculty Funding Submission Confirmation'
+    handler_id: faculty_funding_submission_confirmation
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: '[webform_submission:node] Application Confirmation'
+      body: "This email confirms that we have received your Application. &nbsp;Below is a summary of your submission.<br />\n<br />\nSubmitted on [webform_submission:created]<br />\nSubmitted by: [webform_submission:user]<br />\nSubmitted values are:<br />\n[webform_submission:values]<br />\nSubmission Link: [webform_submission:url]"
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      states:
+        - completed
+      ignore_access: false
+      exclude_empty: true
+      sender_mail: ''
+      sender_name: ''
+  faculty_funding_application_pre_review:
+    id: email
+    label: 'Faculty Funding Application Pre Review'
+    handler_id: faculty_funding_application_pre_review
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      to_mail: '[webform_role:faculty_funding_chair:mail]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: '[webform_submission:node] Application Available for Pre-Review'
+      body: "The following application is available for Pre-Review.&nbsp;<br />\n<br />\nSubmitted on [webform_submission:created]<br />\nSubmitted by: [webform_submission:user]<br />\nSubmitted values are:<br />\n[webform_submission:values]<br />\nSubmission Link: [webform_submission:url]"
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      states:
+        - completed
+      ignore_access: false
+      exclude_empty: true
+      sender_mail: ''
+      sender_name: ''
+  faculty_funding_application_review:
+    id: email
+    label: 'Faculty Funding Application Review'
+    handler_id: faculty_funding_application_review
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      to_mail: '[webform_role:faculty_funding_reviewer:mail]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: '[webform_submission:node] Application Available for Review'
+      body: "You have an application that is available for you to review.&nbsp;<br />\n<br />\nSubmission Application Link: [webform_submission:url]"
+      excluded_elements:
+        first_name: first_name
+        last_name: last_name
+        email: email
+        request_amount: request_amount
+        application_upload: application_upload
+      html: true
+      attachments: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      states:
+        - completed
+      ignore_access: false
+      exclude_empty: true
+      sender_mail: ''
+      sender_name: ''

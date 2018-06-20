@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+id: journal_listing
+label: 'Journal Listing'
+behavior_plugins: {  }

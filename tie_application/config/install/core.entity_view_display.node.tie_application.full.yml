@@ -1,0 +1,36 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.tie_application.field_application_deadline
+    - field.field.node.tie_application.field_application_description
+    - field.field.node.tie_application.field_application_documents
+    - field.field.node.tie_application.field_application_form_ref
+    - field.field.node.tie_application.field_application_tags
+    - node.type.tie_application
+  module:
+    - user
+    - webform
+id: node.tie_application.full
+targetEntityType: node
+bundle: tie_application
+mode: full
+content:
+  field_application_form_ref:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_application_deadline: true
+  field_application_description: true
+  field_application_documents: true
+  field_application_tags: true

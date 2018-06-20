@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_form_ref
+    - node.type.tie_application
+  module:
+    - webform
+id: node.tie_application.field_application_form_ref
+field_name: field_application_form_ref
+entity_type: node
+bundle: tie_application
+label: Application
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: '1'
+    target_uuid: c97be3af-fb54-4104-94f0-1be54bf7cbb5
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: true
+  open: ''
+  close: ''
+field_type: webform

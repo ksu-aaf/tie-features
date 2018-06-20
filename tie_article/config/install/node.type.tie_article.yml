@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - workbench_moderation
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  workbench_moderation:
+    enabled: true
+    allowed_moderation_states:
+      - published
+      - archived
+      - draft
+      - needs_director_review
+      - needs_peer_review
+      - ready_to_publish
+    default_moderation_state: draft
+name: Article
+type: tie_article
+description: 'TIE articles are any piece of content that helps informs readers such as blog post or article.  Content is moderated through an approval process. You may delete the other article content type that is installed by core. '
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,13 @@
+name: Project
+description: 'Provides Project content type and related configuration. An individual or collaborative acadmic enterprise that is carefully planned and designed to achieve a particular outcome. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - path
+  - text
+  - user
+  - workbench_moderation
+package: TIE

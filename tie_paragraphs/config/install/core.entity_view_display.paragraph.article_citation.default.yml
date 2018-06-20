@@ -1,0 +1,82 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_citation.field_authors
+    - field.field.paragraph.article_citation.field_journal_date
+    - field.field.paragraph.article_citation.field_journal_link
+    - field.field.paragraph.article_citation.field_journal_number
+    - field.field.paragraph.article_citation.field_journal_page
+    - field.field.paragraph.article_citation.field_journal_title
+    - field.field.paragraph.article_citation.field_journal_volume
+    - paragraphs.paragraphs_type.article_citation
+  module:
+    - datetime
+    - link
+id: paragraph.article_citation.default
+targetEntityType: paragraph
+bundle: article_citation
+mode: default
+content:
+  field_authors:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_journal_date:
+    weight: 6
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_journal_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_journal_number:
+    weight: 4
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_journal_page:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_journal_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_journal_volume:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

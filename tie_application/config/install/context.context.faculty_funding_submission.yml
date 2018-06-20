@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+name: faculty_funding_submission
+label: 'Faculty Funding Submission'
+group: 'Faculty Funding'
+description: 'Context for Faculty Funding. Addition of Evaluation to each submission. '
+requireAllConditions: false
+disabled: false
+conditions:
+  webform:
+    id: webform
+    webforms:
+      faculty_funding_application: faculty_funding_application
+    negate: 0
+    uuid: 186ad89e-5716-4c51-844f-a94c415e443e
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+reactions:
+  blocks:
+    blocks:
+      159a8f82-091d-447e-bb71-9eed405987a7:
+        id: webform_block
+        label: 'Application Evaluation'
+        provider: webform
+        label_display: visible
+        webform_id: faculty_funding_application_eval
+        default_data: ''
+        region: header
+        weight: '0'
+        context_mapping: {  }
+        theme: seven
+        css_class: ''
+        unique: 0
+        context_id: faculty_funding_submission
+        uuid: 159a8f82-091d-447e-bb71-9eed405987a7
+    id: blocks
+    saved: false
+    uuid: 44a8b9a9-488a-49da-be32-ab182ccae911
+    include_default_blocks: 0
+weight: 0

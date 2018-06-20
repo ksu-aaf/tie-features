@@ -1,0 +1,240 @@
+langcode: en
+status: open
+dependencies:
+  module:
+    - webform_scheduled_email
+open: null
+close: null
+uid: null
+template: false
+archive: false
+id: event_registration
+title: 'Event Registration'
+description: 'The registration form used for general events. &nbsp;This form used automatically attached to the event content type.&nbsp;'
+category: null
+elements: "event_information:\n  '#type': fieldset\n  '#title': 'Event Information'\n  '#private': true\n  event_title:\n    '#type': webform_computed_token\n    '#title': 'Event Title'\n    '#value': '[webform_submission:node:title]'\n  event_date:\n    '#type': webform_computed_token\n    '#title': 'Event Date'\n    '#value': '[webform_submission:node:field_event_date:value]'\n  event_type:\n    '#type': webform_computed_token\n    '#title': 'Event Type'\n    '#value': '[webform_submission:node:field_event_type:entity]'\n  event_area_of_focus:\n    '#type': webform_computed_token\n    '#title': 'Event Area of Focus'\n    '#value': '[webform_submission:node:field_event_area_of_focus:entity]'\n  event_campus:\n    '#type': webform_computed_token\n    '#title': 'Event Campus'\n    '#value': '[webform_submission:node:field_event_campus:entity]'\n  event_location:\n    '#type': webform_computed_token\n    '#title': 'Event Location'\n    '#value': '[webform_submission:node:field_event_location:entity]'\n  event_tag:\n    '#type': webform_computed_token\n    '#title': 'Event Tag'\n    '#value': '[webform_submission:node:field_event_tag]'\n  event_presenter:\n    '#type': webform_computed_token\n    '#title': 'Event Presenter'\n    '#value': '[webform_submission:node:field_event_presenter]'\ninformation:\n  '#type': fieldset\n  '#title': 'Registrant Information'\n  registrant_type:\n    '#type': select\n    '#title': 'Registrant Type'\n    '#options':\n      Myself: Myself\n      'Someone Else': 'Someone Else'\n    '#select2': true\n    '#default_value': Myself\n  first_name:\n    '#title': 'First Name'\n    '#type': textfield\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#prepopulate': true\n    '#required': true\n  email:\n    '#type': email\n    '#title': Email\n    '#required': true\n  working_title:\n    '#type': textfield\n    '#title': 'Working Title'\n  college:\n    '#type': textfield\n    '#title': College\n  department:\n    '#type': textfield\n    '#title': Department\nregistration_status:\n  '#type': select\n  '#title': 'Registration Status'\n  '#options':\n    registered: Registered\n    attended: Attended\n    canceled: Canceled\n    'did not show': 'Did Not Show'\n  '#empty_option': Registered\n  '#empty_value': registered\n  '#select2': true\n  '#private': true\n  '#admin_title': 'Registration Status'"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_login: false
+  form_login_message: ''
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: ''
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: 'Congratulations! You are registered for this event.&nbsp;'
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: 1
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+  form_submit_label: ''
+  form_submit_attributes: {  }
+  form_closed_message: ''
+  wizard_next_button_label: ''
+  wizard_next_button_attributes: {  }
+  wizard_prev_button_label: ''
+  wizard_prev_button_attributes: {  }
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview_next_button_label: ''
+  preview_next_button_attributes: {  }
+  preview_prev_button_label: ''
+  preview_prev_button_attributes: {  }
+  draft_button_label: ''
+  draft_button_attributes: {  }
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  registration_capcity:
+    id: settings
+    label: 'Registration Capcity'
+    handler_id: registration_capcity
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      debug: ''
+      entity_limit_total: '[webform_submission:node:?:field_registration_capacity]'
+      preview_title: ''
+      preview_message: ''
+      confirmation_url: ''
+      confirmation_title: ''
+      confirmation_message: ''
+  email:
+    id: email
+    label: 'Event Registration Confirmation Email'
+    handler_id: email_confirmation
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: '[webform_submission:values:email:raw]'
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: 'Event Registration Confirmation: [webform_submission:source-entity]'
+      body: default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+  email_reminder_24_hours:
+    id: scheduled_email
+    label: 'Event Reminder 24 Hour Notification'
+    handler_id: email_reminder_24_hours
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: default
+      from_options: {  }
+      from_name: default
+      subject: 'Event Reminder: [webform_submission:node:title:value]'
+      body: "This email is a reminder that you have registered for tomorrow&#39;s event titled &quot;[webform_submission:node:title:value].&quot;<br />\n<br />\nBelow is a copy of your registration.&nbsp;\n<p>Submitted on [webform_submission:created]</p>\n\n<p>Submitted by: [webform_submission:user]</p>\n\n<p>Submitted values are:</p>\n[webform_submission:values]"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      send: '[webform_submission:node:field_event_date:value]'
+      days: -1
+      unschedule: false

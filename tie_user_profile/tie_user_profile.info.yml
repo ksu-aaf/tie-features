@@ -1,0 +1,21 @@
+name: 'User Profile'
+description: 'Profile that include image, name and department fields. Also includes permission based field for adding staff positions. '
+type: module
+core: 8.x
+dependencies:
+  - entity_reference_revisions
+  - field
+  - field_group
+  - field_permissions
+  - file
+  - image
+  - options
+  - paragraphs
+  - path
+  - taxonomy
+  - text
+  - tie_core
+  - user
+  - views
+version: 8.x-1.0
+package: TIE

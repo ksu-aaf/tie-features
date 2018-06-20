@@ -1,0 +1,36 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tie_landing_page.field_tie_landing_page_container
+    - field.field.node.tie_landing_page.field_tie_landing_pg_description
+    - node.type.tie_landing_page
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.tie_landing_page.teaser
+targetEntityType: node
+bundle: tie_landing_page
+mode: teaser
+content:
+  field_tie_landing_page_container:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_tie_landing_pg_description:
+    type: text_summary_or_trimmed
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  links: true

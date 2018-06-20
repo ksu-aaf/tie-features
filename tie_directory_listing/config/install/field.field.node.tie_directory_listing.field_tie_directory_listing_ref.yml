@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tie_directory_listing_ref
+    - node.type.tie_directory_listing
+    - paragraphs.paragraphs_type.conference_listing
+    - paragraphs.paragraphs_type.journal_listing
+  module:
+    - entity_reference_revisions
+id: node.tie_directory_listing.field_tie_directory_listing_ref
+field_name: field_tie_directory_listing_ref
+entity_type: node
+bundle: tie_directory_listing
+label: 'Add Listing'
+description: 'Add conference or journal directory listing. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      conference_listing: conference_listing
+      journal_listing: journal_listing
+    target_bundles_drag_drop:
+      article_citation:
+        weight: 14
+        enabled: false
+      body_text:
+        weight: 15
+        enabled: false
+      citations:
+        weight: 16
+        enabled: false
+      conference_citation:
+        weight: 17
+        enabled: false
+      conference_listing:
+        enabled: true
+        weight: 18
+      container:
+        weight: 19
+        enabled: false
+      file:
+        weight: 20
+        enabled: false
+      hero:
+        weight: 21
+        enabled: false
+      image:
+        weight: 22
+        enabled: false
+      jumbotron:
+        weight: 23
+        enabled: false
+      position:
+        weight: 24
+        enabled: false
+      video:
+        weight: 25
+        enabled: false
+      journal_listing:
+        enabled: true
+        weight: 26
+field_type: entity_reference_revisions

@@ -1,0 +1,4 @@
+bundle: tie
+excluded:
+  - honeypot.settings
+required: true

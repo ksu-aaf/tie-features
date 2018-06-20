@@ -1,0 +1,22 @@
+name: 'TIE Core'
+description: 'Core site configurations, views, date and HTML formats, shared fields and taxonomies among entity types.  '
+type: module
+core: 8.x
+version: 8.x-1.0
+package: TIE
+dependencies:
+  - block
+  - block_content
+  - contact
+  - field
+  - file
+  - honeypot
+  - menu_link_content
+  - node
+  - paragraphs
+  - rdf
+  - shortcut
+  - taxonomy
+  - tour
+  - user
+  - webform

@@ -1,0 +1,24 @@
+name: Event
+description: 'Provides Event content type and related configuration. A planned public or virtual occasion that has an start and end time.'
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - datetime_range
+  - field
+  - field_layout
+  - field_permissions
+  - layout_discovery
+  - menu_ui
+  - node
+  - path
+  - taxonomy
+  - text
+  - token
+  - user
+  - views
+  - webform
+  - webform_node
+  - webform_scheduled_email
+package: TIE
+version: 8.x-1.0

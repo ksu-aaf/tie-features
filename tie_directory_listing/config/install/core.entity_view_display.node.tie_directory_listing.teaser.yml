@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tie_directory_listing.field_tie_directory_listing_ref
+    - node.type.tie_directory_listing
+  module:
+    - entity_reference_revisions
+    - user
+id: node.tie_directory_listing.teaser
+targetEntityType: node
+bundle: tie_directory_listing
+mode: teaser
+content:
+  field_tie_directory_listing_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  links: true

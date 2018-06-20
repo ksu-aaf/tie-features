@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tie_article_description
+    - node.type.tie_article
+  module:
+    - text
+id: node.tie_article.field_tie_article_description
+field_name: field_tie_article_description
+entity_type: node
+bundle: tie_article
+label: 'Article Search Engine Description'
+description: 'Enter a short description to be used by search engines or Social Network Meta Tag Information. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

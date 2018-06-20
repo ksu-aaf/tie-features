@@ -1,0 +1,44 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tie_article.field_tie_article_container
+    - field.field.node.tie_article.field_tie_article_description
+    - field.field.node.tie_article.field_tie_article_tag_ref
+    - node.type.tie_article
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.tie_article.default
+targetEntityType: node
+bundle: tie_article
+mode: default
+content:
+  field_tie_article_container:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_tie_article_description:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_tie_article_tag_ref:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  workbench_moderation_control: true

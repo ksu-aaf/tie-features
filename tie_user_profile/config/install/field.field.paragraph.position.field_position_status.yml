@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position_status
+    - paragraphs.paragraphs_type.position
+  module:
+    - options
+id: paragraph.position.field_position_status
+field_name: field_position_status
+entity_type: paragraph
+bundle: position
+label: 'Position Status'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: current
+default_value_callback: ''
+settings: {  }
+field_type: list_string

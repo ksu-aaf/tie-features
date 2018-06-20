@@ -1,0 +1,19 @@
+name: 'Directory Listing'
+description: 'Provides Directory Listing content type and related configuration. A directory listing items that can used as a reference to start building directories of resources. '
+type: module
+core: 8.x
+dependencies:
+  - datetime
+  - entity_reference_revisions
+  - field
+  - field_permissions
+  - link
+  - menu_ui
+  - node
+  - paragraphs
+  - path
+  - user
+  - views
+  - workbench_moderation
+package: TIE
+version: 8.x-1.0

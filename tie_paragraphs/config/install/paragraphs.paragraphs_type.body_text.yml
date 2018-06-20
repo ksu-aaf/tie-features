@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: body_text
+label: 'Body Text'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

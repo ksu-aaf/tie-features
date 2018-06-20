@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_conf_listing_sponsor_url
+    - paragraphs.paragraphs_type.conference_listing
+  module:
+    - link
+id: paragraph.conference_listing.field_conf_listing_sponsor_url
+field_name: field_conf_listing_sponsor_url
+entity_type: paragraph
+bundle: conference_listing
+label: 'Sponsoring Organization'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,27 @@
+name: Application
+description: 'Provides Application content type and related configuration. Used for any type of project, funding or grant application. Allows for submissions of forms that are then viewable by different committee members.'
+type: module
+core: 8.x
+dependencies:
+  - block
+  - context
+  - ctools
+  - datetime
+  - field
+  - field_permissions
+  - file
+  - menu_ui
+  - metatag
+  - node
+  - path
+  - system
+  - taxonomy
+  - text
+  - tie_core
+  - user
+  - views
+  - webform
+  - webform_node
+  - webform_views
+version: 8.x-1.0
+package: TIE

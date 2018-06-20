@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Type'
+vid: event_type
+description: 'The different type of events, such as workshop, book club, panel, webinar. '
+hierarchy: 0
+weight: 0

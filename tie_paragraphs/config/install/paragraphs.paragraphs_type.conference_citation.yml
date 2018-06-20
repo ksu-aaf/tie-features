@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: conference_citation
+label: 'Conference Citation'
+icon_uuid: null
+description: null
+behavior_plugins: {  }

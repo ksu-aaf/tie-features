@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.conference_citation.field_conference_date
+    - field.field.paragraph.conference_citation.field_conference_link
+    - field.field.paragraph.conference_citation.field_conference_paper_abstract
+    - field.field.paragraph.conference_citation.field_conference_paper_authors
+    - field.field.paragraph.conference_citation.field_conference_title
+    - paragraphs.paragraphs_type.conference_citation
+  module:
+    - datetime
+    - link
+id: paragraph.conference_citation.default
+targetEntityType: paragraph
+bundle: conference_citation
+mode: default
+content:
+  field_conference_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_conference_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_conference_paper_abstract:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_conference_paper_authors:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_conference_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

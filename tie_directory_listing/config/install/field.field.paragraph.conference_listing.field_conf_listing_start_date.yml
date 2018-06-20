@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_conf_listing_start_date
+    - paragraphs.paragraphs_type.conference_listing
+  module:
+    - datetime
+id: paragraph.conference_listing.field_conf_listing_start_date
+field_name: field_conf_listing_start_date
+entity_type: paragraph
+bundle: conference_listing
+label: 'Start Date'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

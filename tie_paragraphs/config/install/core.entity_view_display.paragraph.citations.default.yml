@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.citations.field_citation_types
+    - paragraphs.paragraphs_type.citations
+  module:
+    - entity_reference_revisions
+id: paragraph.citations.default
+targetEntityType: paragraph
+bundle: citations
+mode: default
+content:
+  field_citation_types:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

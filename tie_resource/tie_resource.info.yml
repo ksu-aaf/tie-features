@@ -1,0 +1,11 @@
+name: Resource
+description: 'Provides Resource content type and related configuration. Assets to be used to help people function more effectively. These can include a collecdtion of various types of media such as videos, files, images or links to external websites. '
+type: module
+core: 8.x
+dependencies:
+  - field
+  - menu_ui
+  - node
+  - text
+  - user
+package: TIE

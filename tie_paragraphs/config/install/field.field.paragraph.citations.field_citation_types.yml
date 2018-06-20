@@ -1,0 +1,52 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citation_types
+    - paragraphs.paragraphs_type.article_citation
+    - paragraphs.paragraphs_type.citations
+    - paragraphs.paragraphs_type.conference_citation
+  module:
+    - entity_reference_revisions
+id: paragraph.citations.field_citation_types
+field_name: field_citation_types
+entity_type: paragraph
+bundle: citations
+label: Citations
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      article_citation: article_citation
+      conference_citation: conference_citation
+    target_bundles_drag_drop:
+      body_text:
+        weight: 7
+        enabled: false
+      article_citation:
+        enabled: true
+        weight: 8
+      citations:
+        weight: 8
+        enabled: false
+      container:
+        weight: 9
+        enabled: false
+      hero:
+        weight: 10
+        enabled: false
+      jumbotron:
+        weight: 11
+        enabled: false
+      conference_citation:
+        enabled: true
+        weight: 12
+      video:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

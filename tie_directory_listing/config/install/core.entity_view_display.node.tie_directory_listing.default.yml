@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tie_directory_listing.field_tie_directory_listing_ref
+    - node.type.tie_directory_listing
+  module:
+    - entity_reference_revisions
+    - user
+id: node.tie_directory_listing.default
+targetEntityType: node
+bundle: tie_directory_listing
+mode: default
+content:
+  field_tie_directory_listing_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

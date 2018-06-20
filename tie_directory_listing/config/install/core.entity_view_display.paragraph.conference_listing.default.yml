@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.conference_listing.field_conf_listing_end_date
+    - field.field.paragraph.conference_listing.field_conf_listing_end_url
+    - field.field.paragraph.conference_listing.field_conf_listing_sponsor_url
+    - field.field.paragraph.conference_listing.field_conf_listing_start_date
+    - paragraphs.paragraphs_type.conference_listing
+  module:
+    - datetime
+    - link
+id: paragraph.conference_listing.default
+targetEntityType: paragraph
+bundle: conference_listing
+mode: default
+content:
+  field_conf_listing_end_date:
+    weight: 1
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+  field_conf_listing_end_url:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_conf_listing_sponsor_url:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_conf_listing_start_date:
+    weight: 0
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+hidden: {  }

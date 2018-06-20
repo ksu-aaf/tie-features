@@ -1,0 +1,95 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.article_citation.field_authors
+    - field.field.paragraph.article_citation.field_journal_date
+    - field.field.paragraph.article_citation.field_journal_link
+    - field.field.paragraph.article_citation.field_journal_number
+    - field.field.paragraph.article_citation.field_journal_page
+    - field.field.paragraph.article_citation.field_journal_title
+    - field.field.paragraph.article_citation.field_journal_volume
+    - paragraphs.paragraphs_type.article_citation
+  module:
+    - datetime
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_journal:
+      children:
+        - field_journal_volume
+        - field_journal_number
+        - field_journal_page
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        label: 'Journal Citation'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Journal Citation'
+id: paragraph.article_citation.default
+targetEntityType: paragraph
+bundle: article_citation
+mode: default
+content:
+  field_authors:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_journal_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_journal_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_journal_number:
+    weight: 22
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_journal_page:
+    weight: 23
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_journal_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_journal_volume:
+    weight: 21
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

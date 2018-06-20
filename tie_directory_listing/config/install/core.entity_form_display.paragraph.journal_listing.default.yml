@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.journal_listing.field_journal_listing_sponsor
+    - field.field.paragraph.journal_listing.field_journal_listing_url
+    - paragraphs.paragraphs_type.journal_listing
+  module:
+    - link
+    - workbench_moderation
+id: paragraph.journal_listing.default
+targetEntityType: paragraph
+bundle: journal_listing
+mode: default
+content:
+  field_journal_listing_sponsor:
+    weight: 0
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_journal_listing_url:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true

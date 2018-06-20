@@ -1,0 +1,132 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.tie_event.field_event_area_of_focus
+    - field.field.node.tie_event.field_event_campus
+    - field.field.node.tie_event.field_event_date
+    - field.field.node.tie_event.field_event_description
+    - field.field.node.tie_event.field_event_evaluation
+    - field.field.node.tie_event.field_event_location
+    - field.field.node.tie_event.field_event_presenter
+    - field.field.node.tie_event.field_event_registration_form
+    - field.field.node.tie_event.field_event_tag
+    - field.field.node.tie_event.field_event_type
+    - field.field.node.tie_event.field_registration_capacity
+    - node.type.tie_event
+  module:
+    - datetime_range
+    - field_layout
+    - layout_discovery
+    - text
+    - user
+    - webform
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: node.tie_event.default
+targetEntityType: node
+bundle: tie_event
+mode: default
+content:
+  field_event_area_of_focus:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_campus:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_date:
+    weight: 0
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_description:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_event_evaluation:
+    weight: 9
+    label: inline
+    settings:
+      label: 'Go to [webform:title] webform'
+      dialog: ''
+      attributes: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_link
+    region: content
+  field_event_location:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_presenter:
+    weight: 5
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_registration_form:
+    weight: 8
+    label: above
+    settings:
+      label: 'Go to [webform:title] webform'
+      dialog: ''
+      attributes: {  }
+    third_party_settings: {  }
+    type: webform_entity_reference_link
+    region: content
+  field_event_tag:
+    weight: 6
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_event_type:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_registration_capacity:
+    weight: 11
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_conference_date
+    - paragraphs.paragraphs_type.conference_citation
+  module:
+    - datetime
+id: paragraph.conference_citation.field_conference_date
+field_name: field_conference_date
+entity_type: paragraph
+bundle: conference_citation
+label: 'Conference Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

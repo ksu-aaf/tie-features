@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_description
+    - node.type.tie_event
+  module:
+    - text
+id: node.tie_event.field_event_description
+field_name: field_event_description
+entity_type: node
+bundle: tie_event
+label: 'Event Description'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

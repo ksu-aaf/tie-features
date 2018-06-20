@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: faculty_funding_reviewer
+label: 'Faculty Funding Reviewer'
+weight: 3
+is_admin: null

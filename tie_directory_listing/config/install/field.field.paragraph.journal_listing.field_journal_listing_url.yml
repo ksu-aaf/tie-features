@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_journal_listing_url
+    - paragraphs.paragraphs_type.journal_listing
+  module:
+    - link
+id: paragraph.journal_listing.field_journal_listing_url
+field_name: field_journal_listing_url
+entity_type: paragraph
+bundle: journal_listing
+label: 'Journal Listing URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

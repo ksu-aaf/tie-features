@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tie_article_container
+    - node.type.tie_article
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: node.tie_article.field_tie_article_container
+field_name: field_tie_article_container
+entity_type: node
+bundle: tie_article
+label: 'Tie Article Paragraph Container'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      container: container
+    target_bundles_drag_drop:
+      article_citation:
+        weight: 11
+        enabled: false
+      body_text:
+        weight: 12
+        enabled: false
+      citations:
+        weight: 13
+        enabled: false
+      conference_citation:
+        weight: 14
+        enabled: false
+      container:
+        enabled: true
+        weight: 15
+      file:
+        weight: 16
+        enabled: false
+      hero:
+        weight: 17
+        enabled: false
+      image:
+        weight: 18
+        enabled: false
+      jumbotron:
+        weight: 19
+        enabled: false
+      video:
+        weight: 20
+        enabled: false
+field_type: entity_reference_revisions

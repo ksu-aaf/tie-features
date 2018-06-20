@@ -1,0 +1,67 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.position.field_position_area_of_focus
+    - field.field.paragraph.position.field_position_description
+    - field.field.paragraph.position.field_position_end_year
+    - field.field.paragraph.position.field_position_start_year
+    - field.field.paragraph.position.field_position_status
+    - field.field.paragraph.position.field_position_title
+    - paragraphs.paragraphs_type.position
+  module:
+    - text
+id: paragraph.position.default
+targetEntityType: paragraph
+bundle: position
+mode: default
+content:
+  field_position_area_of_focus:
+    type: options_select
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_position_description:
+    type: text_textarea_with_summary
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_position_end_year:
+    type: string_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_position_start_year:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_position_status:
+    type: options_select
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_position_title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

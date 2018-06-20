@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_evaluation
+    - node.type.tie_event
+  module:
+    - webform
+id: node.tie_event.field_event_evaluation
+field_name: field_event_evaluation
+entity_type: node
+bundle: tie_event
+label: 'Event Evaluation'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: 0a97e5a7-1bd7-4676-bde1-0ceaba7ad1ac
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+  default_data: ''
+  status: open
+  open: ''
+  close: ''
+field_type: webform

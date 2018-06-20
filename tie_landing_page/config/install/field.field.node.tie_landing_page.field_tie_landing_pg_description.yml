@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tie_landing_pg_description
+    - node.type.tie_landing_page
+  module:
+    - text
+id: node.tie_landing_page.field_tie_landing_pg_description
+field_name: field_tie_landing_pg_description
+entity_type: node
+bundle: tie_landing_page
+label: 'Landing Page Search Engine Description'
+description: 'Enter a short description to be used by search engines or Social Network Meta Tag Information.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

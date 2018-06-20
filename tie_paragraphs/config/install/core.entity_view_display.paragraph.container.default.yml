@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.container.field_paragraph_reference
+    - paragraphs.paragraphs_type.container
+  module:
+    - entity_reference_revisions
+id: paragraph.container.default
+targetEntityType: paragraph
+bundle: container
+mode: default
+content:
+  field_paragraph_reference:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_position_area_of_focus
+    - paragraphs.paragraphs_type.position
+    - taxonomy.vocabulary.tags
+id: paragraph.position.field_position_area_of_focus
+field_name: field_position_area_of_focus
+entity_type: paragraph
+bundle: position
+label: 'Position Area(s) of Focus'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
