@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'College or Unit'
+vid: college_unit
+description: 'College, Unit or Division that has other departments or units within it. '
+hierarchy: 0
+weight: 0
