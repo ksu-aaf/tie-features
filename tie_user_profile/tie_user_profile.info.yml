@@ -7,9 +7,11 @@ dependencies:
   - features
   - field
   - field_group
+  - field_layout
   - field_permissions
   - file
   - image
+  - layout_discovery
   - options
   - paragraphs
   - path

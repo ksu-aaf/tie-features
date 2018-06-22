@@ -10,7 +10,13 @@ dependencies:
     - field.field.paragraph.position.field_position_title
     - paragraphs.paragraphs_type.position
   module:
+    - field_layout
+    - layout_discovery
     - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: paragraph.position.default
 targetEntityType: paragraph
 bundle: position

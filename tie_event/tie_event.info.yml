@@ -14,11 +14,13 @@ dependencies:
   - path
   - taxonomy
   - text
+  - tie_user_profile
   - token
   - user
   - views
   - webform
   - webform_node
   - webform_scheduled_email
+  - webform_views
 package: TIE
 version: 8.x-1.0

@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.tie_event.field_event_registration_form
     - field.field.node.tie_event.field_event_tag
     - field.field.node.tie_event.field_event_type
+    - field.field.node.tie_event.field_registration_capacity
     - node.type.tie_event
   module:
     - datetime_range
@@ -50,7 +51,7 @@ content:
     type: daterange_default
     weight: 0
     region: content
-    label: inline
+    label: visually_hidden
     settings:
       timezone_override: ''
       format_type: medium
@@ -118,4 +119,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_registration_capacity: true

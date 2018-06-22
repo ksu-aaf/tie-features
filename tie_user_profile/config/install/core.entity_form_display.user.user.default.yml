@@ -12,10 +12,16 @@ dependencies:
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
+    - field_layout
     - image
+    - layout_discovery
     - paragraphs
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -27,13 +33,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   contact:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_unit_position:
     type: paragraphs
-    weight: 7
+    weight: 8
     region: content
     settings:
       title: Paragraph
@@ -50,7 +56,7 @@ content:
     third_party_settings: {  }
   field_user_bio:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 9
     region: content
     settings:
       rows: 9
@@ -67,7 +73,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_user_department:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -100,12 +106,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   language:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }

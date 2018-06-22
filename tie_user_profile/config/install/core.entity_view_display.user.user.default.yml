@@ -13,9 +13,15 @@ dependencies:
     - image.style.thumbnail
   module:
     - entity_reference_revisions
+    - field_layout
     - image
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
 id: user.user.default
 targetEntityType: user
 bundle: user

@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.tie_event.field_event_area_of_focus
     - field.field.node.tie_event.field_event_campus
     - field.field.node.tie_event.field_event_date
     - field.field.node.tie_event.field_event_description
@@ -12,9 +13,9 @@ dependencies:
     - field.field.node.tie_event.field_event_registration_form
     - field.field.node.tie_event.field_event_tag
     - field.field.node.tie_event.field_event_type
+    - field.field.node.tie_event.field_registration_capacity
     - node.type.tie_event
   module:
-    - datetime_range
     - field_layout
     - layout_discovery
     - text
@@ -35,16 +36,6 @@ content:
     label: inline
     settings:
       link: true
-    third_party_settings: {  }
-  field_event_date:
-    type: daterange_default
-    weight: 0
-    region: content
-    label: inline
-    settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
     third_party_settings: {  }
   field_event_description:
     type: text_trimmed
@@ -93,5 +84,8 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_area_of_focus: true
+  field_event_date: true
   field_event_evaluation: true
   field_event_registration_form: true
+  field_registration_capacity: true
