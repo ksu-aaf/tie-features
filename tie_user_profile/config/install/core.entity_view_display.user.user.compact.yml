@@ -2,13 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_unit_position
-    - field.field.user.user.field_user_bio
+    - core.entity_view_mode.user.compact
     - field.field.user.user.field_user_college_unit
     - field.field.user.user.field_user_department
-    - field.field.user.user.field_user_first_name
-    - field.field.user.user.field_user_last_name
-    - field.field.user.user.field_user_position_title
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -20,14 +16,11 @@ third_party_settings:
   field_layout:
     id: layout_onecol
     settings: {  }
-id: user.user.default
+id: user.user.compact
 targetEntityType: user
 bundle: user
-mode: default
+mode: compact
 content:
-  member_for:
-    weight: 5
-    region: content
   user_picture:
     type: image
     weight: 0
@@ -38,10 +31,6 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
-  field_unit_position: true
-  field_user_bio: true
   field_user_college_unit: true
   field_user_department: true
-  field_user_first_name: true
-  field_user_last_name: true
-  field_user_position_title: true
+  member_for: true

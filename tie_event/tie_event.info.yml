@@ -14,7 +14,6 @@ dependencies:
   - path
   - taxonomy
   - text
-  - tie_user_profile
   - token
   - user
   - views

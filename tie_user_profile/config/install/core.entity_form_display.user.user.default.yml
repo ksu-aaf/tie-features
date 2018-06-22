@@ -15,8 +15,6 @@ dependencies:
     - field_layout
     - image
     - layout_discovery
-    - paragraphs
-    - text
     - user
 third_party_settings:
   field_layout:
@@ -28,99 +26,30 @@ bundle: user
 mode: default
 content:
   account:
+    weight: -10
+    region: content
+  contact:
+    weight: 5
+    region: content
+  language:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  contact:
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_unit_position:
-    type: paragraphs
-    weight: 8
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        duplicate: duplicate
-        collapse_edit_all: collapse_edit_all
-    third_party_settings: {  }
-  field_user_bio:
-    type: text_textarea_with_summary
-    weight: 9
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-  field_user_college_unit:
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_user_department:
-    weight: 7
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_user_first_name:
-    type: string_textfield
-    weight: 2
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_user_last_name:
-    type: string_textfield
-    weight: 3
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  field_user_position_title:
-    type: string_textfield
-    weight: 4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  language:
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   timezone:
-    weight: 12
+    weight: 6
     region: content
-    settings: {  }
-    third_party_settings: {  }
   user_picture:
     type: image_image
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: 1
+    weight: -1
     region: content
-hidden: {  }
+hidden:
+  field_unit_position: true
+  field_user_bio: true
+  field_user_college_unit: true
+  field_user_department: true
+  field_user_first_name: true
+  field_user_last_name: true
+  field_user_position_title: true
