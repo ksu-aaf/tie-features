@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_event_registration_form
     - node.type.tie_event
+    - webform.webform.event_registration
   module:
     - webform
 id: node.tie_event.field_event_registration_form
@@ -20,7 +21,7 @@ default_value:
     status: open
     open: ''
     close: ''
-    target_uuid: 473f7421-d235-43fe-b786-99915b88014f
+    target_uuid: 53525241-d9f6-48fe-8f6c-cd10f48cf54d
 default_value_callback: ''
 settings:
   handler: 'default:webform'
