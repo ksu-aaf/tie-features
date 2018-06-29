@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'College or Division'
+vid: college_or_division
+description: 'A college or division that may have departments or units as direct reports.'
+hierarchy: 0
+weight: 0

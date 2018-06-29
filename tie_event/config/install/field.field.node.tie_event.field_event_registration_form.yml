@@ -4,7 +4,6 @@ dependencies:
   config:
     - field.storage.node.field_event_registration_form
     - node.type.tie_event
-    - webform.webform.event_registration
   module:
     - webform
 id: node.tie_event.field_event_registration_form

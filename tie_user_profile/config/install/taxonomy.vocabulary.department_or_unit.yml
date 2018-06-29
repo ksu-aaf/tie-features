@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Department or Unit'
+vid: department_or_unit
+description: 'A department, unit or program that may report to a College or Division.'
+hierarchy: 0
+weight: 0

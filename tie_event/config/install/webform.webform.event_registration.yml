@@ -179,7 +179,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: default
+      to_mail: _default
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -189,7 +189,7 @@ handlers:
       from_options: {  }
       from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
       subject: 'Event Registration Confirmation: [webform_submission:source-entity]'
-      body: default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -218,9 +218,9 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: _default
       from_options: {  }
-      from_name: default
+      from_name: _default
       subject: 'Event Reminder: [webform_submission:node:title:value]'
       body: "This email is a reminder that you have registered for tomorrow&#39;s event titled &quot;[webform_submission:node:title:value].&quot;<br />\n<br />\nBelow is a copy of your registration.&nbsp;\n<p>Submitted on [webform_submission:created]</p>\n\n<p>Submitted by: [webform_submission:user]</p>\n\n<p>Submitted values are:</p>\n[webform_submission:values]"
       excluded_elements: {  }

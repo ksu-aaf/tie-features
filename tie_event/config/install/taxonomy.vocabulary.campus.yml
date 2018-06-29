@@ -3,6 +3,6 @@ status: true
 dependencies: {  }
 name: Campus
 vid: campus
-description: ''
+description: 'The name of a specific campus, this also includes virtual. '
 hierarchy: 0
 weight: 0

@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_college_or_division
+    - taxonomy.vocabulary.college_or_division
+  module:
+    - user
+id: user.user.field_college_or_division
+field_name: field_college_or_division
+entity_type: user
+bundle: user
+label: 'College or Division'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      college_or_division: college_or_division
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

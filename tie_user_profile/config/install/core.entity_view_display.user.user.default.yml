@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_college_or_division
+    - field.field.user.user.field_department_or_unit
     - field.field.user.user.field_unit_position
     - field.field.user.user.field_user_bio
-    - field.field.user.user.field_user_college_unit
-    - field.field.user.user.field_user_department
     - field.field.user.user.field_user_first_name
     - field.field.user.user.field_user_last_name
     - field.field.user.user.field_user_position_title
@@ -38,10 +38,10 @@ content:
     third_party_settings: {  }
     label: hidden
 hidden:
+  field_college_or_division: true
+  field_department_or_unit: true
   field_unit_position: true
   field_user_bio: true
-  field_user_college_unit: true
-  field_user_department: true
   field_user_first_name: true
   field_user_last_name: true
   field_user_position_title: true

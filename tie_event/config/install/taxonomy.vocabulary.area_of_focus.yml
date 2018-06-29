@@ -3,6 +3,6 @@ status: true
 dependencies: {  }
 name: 'Area of Focus'
 vid: area_of_focus
-description: ''
+description: 'A topic at that serves a program or project. Mainly used to organize sections of the website.'
 hierarchy: 0
 weight: 0

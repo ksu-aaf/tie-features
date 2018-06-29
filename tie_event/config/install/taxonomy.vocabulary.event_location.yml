@@ -3,6 +3,6 @@ status: true
 dependencies: {  }
 name: 'Event Location'
 vid: event_location
-description: ''
+description: 'The location of an event, this can be a building and room number or virtual. '
 hierarchy: 0
 weight: 0
