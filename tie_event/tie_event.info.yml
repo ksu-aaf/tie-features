@@ -5,6 +5,7 @@ core: 8.x
 dependencies:
   - datetime
   - datetime_range
+  - feeds
   - field
   - field_layout
   - field_permissions

@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.tie_event.feeds_item
     - field.field.node.tie_event.field_event_area_of_focus
     - field.field.node.tie_event.field_event_campus
     - field.field.node.tie_event.field_event_date
@@ -170,4 +171,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  feeds_item: true

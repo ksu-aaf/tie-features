@@ -9,12 +9,12 @@ archive: false
 id: event_evaluation
 title: 'Event Evaluation'
 description: 'Evaluation used for the general events.&nbsp;'
-category: null
+category: ''
 elements: "workshop_value:\n  '#type': webform_likert\n  '#title': 'Workshop Value'\n  '#questions':\n    4: 'To what extent were the handouts valuable?'\n    3: 'To what extent was the workshop well presented'\n    6: 'To what extent was the time managed effectively?'\n    5: 'To what extent were the activities useful?'\n  '#answers':\n    - 'Not at all'\n    - 'A Little'\n    - Somewhat\n    - 'Very Much'\n  '#na_answer': true\n  '#na_answer_value': 'Not Applicable'\n  '#required': true\nhow_was_the_overall_session_:\n  '#type': webform_rating\n  '#title': 'How was the overall session?'\n  '#required': true\n"
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
   page: true
   page_submit_path: ''
