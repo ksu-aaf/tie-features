@@ -1,2 +1,8 @@
 bundle: tie
+excluded:
+  - feeds.feed_type.area_of_focus
+  - feeds.feed_type.campus_terms_import
+  - feeds.feed_type.event_node_import
+  - field.field.node.tie_event.feeds_item
+  - field.storage.node.feeds_item
 required: true
