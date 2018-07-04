@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.college_or_division
+  module:
+    - taxonomy
+label: 'College or Division Terms Import'
+id: college_or_division_terms_import
+description: 'Terms Feeds Import for the College or Division Vocabulary'
+import_period: -1
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  update_existing: 2
+  update_non_existent: _keep
+  expire: -1
+  skip_hash_check: false
+  values:
+    vid: college_or_division
+  owner_id: 0
+  authorize: false
+  owner_feed_author: false
+custom_sources: {  }
+mappings: {  }
